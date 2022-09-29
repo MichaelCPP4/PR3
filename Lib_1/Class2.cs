@@ -36,6 +36,8 @@ namespace Lib_1
         public static int SumRow(int[,] mas, int k)
         {
             int sum = 0;
+            //Тупа Чебурашка
+            int cheburashka = 228;
             k--;
             for (int i = 0; i < mas.GetLength(1); i++)
             {
