@@ -1,0 +1,50 @@
+﻿<Window x:Class="WPF_A2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_A2"
+        mc:Ignorable="d"
+        Title="практическая работа №3" Height="490" Width="1276" ResizeMode="NoResize" Icon="/comp_3d.ico">
+    <Grid Margin="0,0,0,-16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Функции" Margin="10,237,0,0" FontSize="18" Height="197" VerticalAlignment="Top" HorizontalAlignment="Left" Width="413">
+            <Grid>
+                <Button x:Name="calculate" Content="Вычислить" Margin="10,56,0,0" VerticalAlignment="Top" Height="40" HorizontalAlignment="Left" Width="164" Click="Calculate_ButtonClick"/>
+                <Button x:Name="exit" Content="Выход" Margin="227,100,0,0" VerticalAlignment="Top" Height="40" HorizontalAlignment="Left" Width="164" Click="Exit_ButtonClick"/>
+                <Button x:Name="clear" Content="Стереть" VerticalAlignment="Top" Height="40" HorizontalAlignment="Left" Width="164" Click="Clear_ButtonClick" Margin="10,101,0,0"/>
+                <Button Content="Заполнить" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Create_Click" Height="40" Width="164"/>
+                <Button Content="Сохранить" HorizontalAlignment="Left" Margin="227,10,0,0" VerticalAlignment="Top" Height="40" Width="164" Click="Save_ButtonClick"/>
+                <Button Content="Открыть" HorizontalAlignment="Left" Margin="227,55,0,0" VerticalAlignment="Top" Height="40" Width="164" Click="Open_ButtonClick"/>
+            </Grid>
+        </GroupBox>
+        <Menu Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="159">
+            <MenuItem Header="Функции">
+                <MenuItem Header="Заполнить" Click="Create_Click"></MenuItem>
+                <MenuItem Header="Вычислить" Click="Calculate_ButtonClick"></MenuItem>
+                <MenuItem Header="Стереть" Click="Clear_ButtonClick"></MenuItem>
+                <MenuItem Header="Сохранить" Click="Save_ButtonClick"></MenuItem>
+                <MenuItem Header="Открыть" Click="Open_ButtonClick"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Выход" Click="Exit_ButtonClick"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="О программе" Click="Info_ClickButton"/>
+        </Menu>
+        <TextBox x:Name="textBoxM" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="30" FontSize="18" VerticalContentAlignment="Center" Margin="10,66,0,0"/>
+        <TextBox IsReadOnly="True" x:Name="textBoxResult" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="30" Margin="233,202,0,0" FontSize="18" VerticalContentAlignment="Center"/>
+        <Label Content="Введите кол-во строк:" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" FontSize="18" Width="193"/>
+        <Label Content="Результат:" HorizontalAlignment="Left" Margin="233,168,0,0" VerticalAlignment="Top" FontSize="18" Width="148"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="402" Margin="470,32,0,0" VerticalAlignment="Top" Width="771" CellEditEnding="DataGrid_CellEditEnding" FontSize="14" FontFamily="/Pr21;component/Fonts/#Minecraft Rus" CanUserAddRows="False"/>
+        <TextBox x:Name="textBoxMin" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="30" Margin="10,133,0,0" FontSize="18"/>
+        <Label Content="Минимальное число:" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" FontSize="18" Width="189"/>
+        <TextBox x:Name="textBoxN" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="30" FontSize="18" VerticalContentAlignment="Center" Margin="234,66,0,0"/>
+        <Label Content="Введите кол-во столбцов:" HorizontalAlignment="Left" Margin="234,32,0,0" VerticalAlignment="Top" FontSize="18" Width="231"/>
+        <TextBox x:Name="textBoxMax" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="30" Margin="235,133,0,0" FontSize="18"/>
+        <Label Content="Максимальное число:" HorizontalAlignment="Left" Margin="235,99,0,0" VerticalAlignment="Top" FontSize="18" Width="204"/>
+        <TextBox x:Name="textBoxK" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="30" Margin="11,202,0,0" FontSize="18" ToolTip="Номер строки для вычисления её суммы"/>
+        <Label Content="Число K:" HorizontalAlignment="Left" Margin="11,168,0,0" VerticalAlignment="Top" FontSize="18" Width="189"/>
+
+    </Grid>
+</Window>
